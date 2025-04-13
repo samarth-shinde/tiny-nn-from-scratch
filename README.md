@@ -1,4 +1,4 @@
-# Simple Neural Network from Scratch 🧠⚙️
+# Simple Tiny Neural Network from Scratch 🧠⚙️
 
 A basic neural network built using pure NumPy to understand how feedforward, backpropagation, and gradient descent work under the hood. No libraries like TensorFlow or PyTorch — just math and code.
 
