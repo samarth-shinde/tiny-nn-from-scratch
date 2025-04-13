@@ -21,10 +21,9 @@ A basic neural network built using pure NumPy to understand how feedforward, bac
 
 ### 1. **Sigmoid Function & Derivative**
 
-\[
-\sigma(x) = \frac{1}{1 + e^{-x}} \\
-\sigma'(x) = \sigma(x)(1 - \sigma(x))
-\]
+Sigmoid:         σ(x) = 1 / (1 + e^(-x))
+Derivative:      σ'(x) = σ(x) * (1 - σ(x))
+
 
 Used to add non-linearity and squash outputs between 0 and 1.
 
@@ -32,9 +31,7 @@ Used to add non-linearity and squash outputs between 0 and 1.
 
 ### 2. **Loss Function: Mean Squared Error (MSE)**
 
-\[
-L = \frac{1}{n} \sum_{i=1}^n (y_{\text{true}} - y_{\text{pred}})^2
-\]
+MSE: L = (1/n) * Σ (y_true - y_pred)^2
 
 Shows how far off predictions are from actual values.
 
@@ -44,9 +41,8 @@ Shows how far off predictions are from actual values.
 
 We update weights to reduce loss:
 
-\[
-w \leftarrow w - \eta \cdot \frac{\partial L}{\partial w}
-\]
+w ← w - η * ∂L/∂w
+
 
 Where:
 - \( w \) is a weight
@@ -76,3 +72,18 @@ data = np.array([
   [17, 4],   # Charlie → 0
   [-15, -6], # Diana → 1
 ])
+```
+
+## 🖥️ Run It (macOS)
+```console
+python3 -m pip install -r requirements.txt -t package
+python3 -m gender_prediction
+```
+
+
+## 📚 Resources That Helped:
+
+- 3Blue1Brown – Neural Networks
+- CS231n Notes
+
+
