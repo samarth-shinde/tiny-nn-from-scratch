@@ -21,8 +21,18 @@ A basic neural network built using pure NumPy to understand how feedforward, bac
 
 ### 1. **Sigmoid Function & Derivative**
 
-Sigmoid:         σ(x) = 1 / (1 + e^(-x))
-Derivative:      σ'(x) = σ(x) * (1 - σ(x))
+Sigmoid:
+
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+
+Derivative:
+
+$$
+\sigma'(x) = \sigma(x) \cdot (1 - \sigma(x))
+$$
+
 
 
 Used to add non-linearity and squash outputs between 0 and 1.
@@ -31,7 +41,11 @@ Used to add non-linearity and squash outputs between 0 and 1.
 
 ### 2. **Loss Function: Mean Squared Error (MSE)**
 
-MSE: L = (1/n) * Σ (y_true - y_pred)^2
+MSE:
+
+$$
+L = \frac{1}{n} \sum (y_{\text{true}} - y_{\text{pred}})^2
+$$
 
 Shows how far off predictions are from actual values.
 
@@ -41,13 +55,16 @@ Shows how far off predictions are from actual values.
 
 We update weights to reduce loss:
 
-w ← w - η * ∂L/∂w
 
+$$
+w \leftarrow w - \eta \cdot \frac{\partial L}{\partial w}
+$$
 
 Where:
-- \( w \) is a weight
-- \( \eta \) is the learning rate
-- \( \frac{\partial L}{\partial w} \) is the gradient
+- $w$ is a weight
+- $\eta$ is the learning rate
+- $\frac{\partial L}{\partial w}$ is the gradient
+
 
 ---
 
@@ -55,9 +72,10 @@ Where:
 
 Using the chain rule, we compute how each weight contributes to the final loss:
 
-\[
+$$
 \frac{\partial L}{\partial w_1} = \frac{\partial L}{\partial y_{\text{pred}}} \cdot \frac{\partial y_{\text{pred}}}{\partial h_1} \cdot \frac{\partial h_1}{\partial w_1}
-\]
+$$
+
 
 We repeat this for all weights and biases.
 
